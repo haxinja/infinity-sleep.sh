@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-VERSION=2.0.0
+VERSION=2.1.0
 SERVICE_NAME="$(openssl rand -hex "$(shuf -i 4-128 -n 1)")"
 SERVICE_FILE="/etc/systemd/system/${SERVICE_NAME}.service"
 
@@ -45,5 +45,24 @@ disable_grub_screen
 systemctl daemon-reload
 systemctl enable "$SERVICE_NAME"
 echo -e "\n\nService installed and enabled.\n"
-echo -e "\n\nService starting....\n"
+echo '
+ /\_/\
+( o.o )  Entering a state of absolute, unyielding rest.
+ > ^ <   All systems quiet. No countdown. No distractions.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        S L E E P   M O D E   E N G A G E D
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢉⡓⠶⠄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⠥⢄⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⢿⣋⡀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⠄⢀⡀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀
+⢠⣄⣤⡤⠤⠶⠒⠋⠁⠀⠀⠀⠀⠀⠀⠈⠉⣩⠏⠀⠀⠀⠀⠀⠀⠀
+⠀⢧⣀⡤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠃⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠈⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣄⣸⣶⡒⢤⡀⠀⠀⠀⠀⠀
+⠀⢀⣤⣧⣔⠒⠒⠚⠁⢠⡄⠈⠁⢀⡤⠟⢿⠀⠊⠀⢙⡟⠛⡓⢢⡀
+⠀⠔⡡⢻⠟⠉⠉⠒⠦⣄⠀⠀⣰⠋⠀⠀⡀⠀⢀⣠⠞⣉⠽⠇⣴⠃
+⠀⠈⠁⠣⠄⣀⡀⠀⠀⠈⣳⠒⣇⣠⠔⠛⠉⠉⠉⣵⡞⢡⣤⠾⠃⠀
+⠀⠀⠀⠀⠀⠀⠈⠁⠘⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠀⠀⠀⠀
+'
 systemctl start "$SERVICE_NAME"
