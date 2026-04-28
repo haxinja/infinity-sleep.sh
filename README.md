@@ -1,7 +1,7 @@
 <div align="center">
 
 
-![Infinity Sleep Banner](./cat.png)
+<img height="250px" src="./cat.png">
 
 [![Install Now](https://img.shields.io/badge/Install-Now-brightgreen?style=for-the-badge&logo=gnu-bash)](https://github.com/haxinja/infinity-sleep.sh)
 [![Donate](https://img.shields.io/badge/Donate-Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee)](https://onlyfans.com/haxinja)
