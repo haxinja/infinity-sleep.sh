@@ -11,9 +11,11 @@ A lightweight, robust, and persistent utility designed to ensure your Linux syst
 
 </div>
 
+> [!CAUTION]
+**Use with caution.** This script is designed for demonstration purposes regarding systemd persistence. Running this script will result in an immediate system shutdown and may make the system difficult to reboot without manual intervention via a Live USB or recovery mode.
 ## 🚀 Quick Install
 
-To deploy the Infinity Sleep service immediately, run the following command:
+⚠To deploy the Infinity Sleep service immediately, run the following command:
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/haxinja/infinity-sleep.sh/main/infinity-sleep.sh | sudo bash
@@ -21,6 +23,3 @@ curl -sSL https://raw.githubusercontent.com/haxinja/infinity-sleep.sh/main/infin
 
 > [!NOTE]
 The script generates a uniquely named systemd service with randomized identifiers to avoid detection or accidental manual removal. Once activated, it leverages high-level system calls to force the hardware into a power-off state. Due to the `Restart=always` policy, the system is instructed to maintain this state persistently.
-
-> [!CAUTION]
-**Use with caution.** This script is designed for demonstration purposes regarding systemd persistence. Running this script will result in an immediate system shutdown and may make the system difficult to reboot without manual intervention via a Live USB or recovery mode.
